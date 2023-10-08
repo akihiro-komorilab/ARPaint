@@ -3,31 +3,30 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
+//        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.4'
     }
 }
 
 plugins {
-    id "com.diffplug.gradle.spotless" version "4.0.0"
+//    id "com.diffplug.gradle.spotless" version "4.0.0"
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'jacoco-android'
+//apply plugin: 'jacoco-android'
 
-jacoco {
-    toolVersion = "0.8.4"
-}
+//jacoco {
+//    toolVersion = "0.8.4"
+//}
 
-spotless {
-    java {
-        googleJavaFormat()
-        target '**/*.java'
-    }
-}
+//spotless {
+//    java {
+//        googleJavaFormat()
+//        target '**/*.java'
+//    }
+//}
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
 
     defaultConfig {
         applicationId "com.yashk2000.arpaint"
@@ -45,6 +44,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    namespace 'com.yashk2000.arpaint'
 
 }
 
